@@ -1,12 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
+import { makeStyles, AppBar, Toolbar, Typography, Button, IconButton } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 
 const useStyles = makeStyles((theme) => ({
@@ -33,13 +27,18 @@ const Header = () => {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          <IconButton
+            edge="start"
+            className={classes.menuButton}
+            color="secondary"
+            aria-label="menu"
+          >
             <MenuIcon />
           </IconButton>
           <Typography
             component={Link}
             to={"/dashboard"}
-            color="inherit"
+            color="secondary"
             variant="h6"
             className={classes.title}
           >
@@ -51,7 +50,7 @@ const Header = () => {
             component={Link}
             to={"/dashboard/invoeren"}
             variant="contained"
-            color="primary"
+            color="secondary"
           >
             Nieuwe activiteit toevoegen
           </Button>
@@ -61,7 +60,7 @@ const Header = () => {
             component={Link}
             to={"/dashboard/agenda"}
             variant="contained"
-            color="primary"
+            color="secondary"
           >
             Agenda
           </Button>
@@ -69,9 +68,19 @@ const Header = () => {
           <Button
             className={classes.menuLinks}
             component={Link}
+            to={"/dashboard/handleiding"}
+            variant="contained"
+            color="secondary"
+          >
+            Handleiding
+          </Button>
+
+          <Button
+            className={classes.menuLinks}
+            component={Link}
             to={"/dashboard/faq"}
             variant="contained"
-            color="primary"
+            color="secondary"
           >
             Veelgestelde vragen
           </Button>
@@ -81,7 +90,7 @@ const Header = () => {
             component={Link}
             to={"/"}
             variant="contained"
-            color="primary"
+            color="secondary"
           >
             Login
           </Button>

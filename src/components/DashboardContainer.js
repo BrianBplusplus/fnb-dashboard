@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button, ButtonGroup, makeStyles } from "@material-ui/core";
+import { Button, makeStyles } from "@material-ui/core";
+import AddIcon from "@material-ui/icons/Add";
+import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
+import MenuBookIcon from "@material-ui/icons/MenuBook";
+import LiveHelpIcon from "@material-ui/icons/LiveHelp";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -11,6 +15,13 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1),
     },
   },
+  primaryButton: {
+    margin: theme.spacing(1),
+    color: "#fff",
+  },
+  secondaryButton: {
+    margin: theme.spacing(1),
+  },
 }));
 
 const DashboardContainer = () => {
@@ -19,22 +30,57 @@ const DashboardContainer = () => {
   return (
     <div className={classes.root}>
       <h1>FNB-Dashboard</h1>
-      <ButtonGroup color="primary" aria-label="contained primary button group">
-        <Button component={Link} to={"/dashboard/invoeren"}>
-          Nieuwe activiteit toevoegen
+
+      <div>
+        <Button
+          variant="contained"
+          color="primary"
+          size="large"
+          className={classes.primaryButton}
+          startIcon={<AddIcon />}
+          component={Link}
+          to={"/dashboard/invoeren"}
+        >
+          Nieuwe Activiteit Toevoegen
         </Button>
-        <Button component={Link} to={"/dashboard/agenda"}>
-          Agenda bekijken
+
+        <Button
+          variant="contained"
+          color="primary"
+          size="large"
+          className={classes.primaryButton}
+          component={Link}
+          to={"/dashboard/agenda"}
+          startIcon={<CalendarTodayIcon />}
+        >
+          Agenda
         </Button>
-      </ButtonGroup>
-      <ButtonGroup color="primary" aria-label="contained primary button group">
-        <Button component={Link} to={"/dashboard/handleiding"}>
+      </div>
+      <div>
+        <Button
+          variant="contained"
+          color="default"
+          size="large"
+          className={classes.secondaryButton}
+          component={Link}
+          to={"/dashboard/handleiding"}
+          startIcon={<MenuBookIcon />}
+        >
           Handleiding
         </Button>
-        <Button component={Link} to={"/dashboard/faq"}>
-          Veelgestelde vragen
+
+        <Button
+          variant="contained"
+          color="default"
+          size="large"
+          className={classes.secondaryButton}
+          component={Link}
+          to={"/dashboard/faq"}
+          startIcon={<LiveHelpIcon />}
+        >
+          Veelgestelde Vragen
         </Button>
-      </ButtonGroup>
+      </div>
     </div>
   );
 };

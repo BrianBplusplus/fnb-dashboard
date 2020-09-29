@@ -1,6 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { makeStyles, AppBar, Toolbar, Typography, Button, IconButton } from "@material-ui/core";
+import {
+  makeStyles,
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  IconButton,
+  Menu,
+  MenuItem,
+} from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 
 const useStyles = makeStyles((theme) => ({
@@ -21,6 +30,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Header = () => {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   const classes = useStyles();
 
   return (
@@ -32,9 +51,35 @@ const Header = () => {
             className={classes.menuButton}
             color="secondary"
             aria-label="menu"
+            onClick={handleClick}
           >
             <MenuIcon />
           </IconButton>
+
+          <Menu
+            id="simple-menu"
+            anchorEl={anchorEl}
+            keepMounted
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+          >
+            <MenuItem component={Link} to={"/dashboard/"} onClick={handleClose}>
+              Dashboard
+            </MenuItem>
+            <MenuItem component={Link} to={"/dashboard/invoeren"} onClick={handleClose}>
+              Nieuwe Activiteit
+            </MenuItem>
+            <MenuItem component={Link} to={"/dashboard/agenda"} onClick={handleClose}>
+              Agenda
+            </MenuItem>
+            <MenuItem component={Link} to={"/dashboard/handleiding"} onClick={handleClose}>
+              Handleiding
+            </MenuItem>
+            <MenuItem component={Link} to={"/dashboard/faq"} onClick={handleClose}>
+              FAQ
+            </MenuItem>
+          </Menu>
+
           <Typography
             component={Link}
             to={"/dashboard"}
@@ -44,46 +89,6 @@ const Header = () => {
           >
             FNB-Dashboard
           </Typography>
-
-          <Button
-            className={classes.menuLinks}
-            component={Link}
-            to={"/dashboard/invoeren"}
-            variant="contained"
-            color="secondary"
-          >
-            Nieuwe activiteit toevoegen
-          </Button>
-
-          <Button
-            className={classes.menuLinks}
-            component={Link}
-            to={"/dashboard/agenda"}
-            variant="contained"
-            color="secondary"
-          >
-            Agenda
-          </Button>
-
-          <Button
-            className={classes.menuLinks}
-            component={Link}
-            to={"/dashboard/handleiding"}
-            variant="contained"
-            color="secondary"
-          >
-            Handleiding
-          </Button>
-
-          <Button
-            className={classes.menuLinks}
-            component={Link}
-            to={"/dashboard/faq"}
-            variant="contained"
-            color="secondary"
-          >
-            Veelgestelde vragen
-          </Button>
 
           <Button
             className={classes.menuLinks}

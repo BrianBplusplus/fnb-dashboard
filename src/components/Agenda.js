@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button, makeStyles } from "@material-ui/core";
 
+import exampleAgenda from "../img/calendarExample.png"
+
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
@@ -20,6 +22,9 @@ const Agenda = () => {
   return (
     <div>
       Agenda Prototype
+
+      <img src={exampleAgenda} />
+
       <Button
         variant="contained"
         color="primary"

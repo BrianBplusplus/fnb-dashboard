@@ -23,7 +23,7 @@ const Agenda = () => {
     <div>
       Agenda Prototype
 
-      <img src={exampleAgenda} />
+      <img alt="exampleimage" src={exampleAgenda} />
 
       <Button
         variant="contained"

@@ -96,8 +96,44 @@ const InputForm = () => {
       <br></br>
       <br></br>
 
-      <label htmlFor="uitvoering">Uitvoering</label>
-      <input type="text" id="uitvoering" name="uitvoering" placeholder="Uitvoering"></input>
+      <label htmlFor="prijs">Prijs</label>
+      <input type="text" id="prijs" name="prijs" placeholder="Prijs"></input>
+
+      <br></br>
+      <br></br>
+
+      <label htmlFor="prijs">Korting</label>
+      <input type="text" id="korting" name="korting" placeholder="Korting"></input>
+
+      <br></br>
+      <br></br>
+
+      <label htmlFor="prijs">Aantal kaarten</label>
+      <input type="text" id="aantalkaarten" name="aantal kaarten" placeholder="Aantal kaarten"></input>
+
+      <br></br>
+      <br></br>
+
+      <label htmlFor="prijs">Kostenplaats</label>
+      <input type="text" id="kostenplaats" name="kostenplaats" placeholder="Kostenplaats"></input>
+
+      <br></br>
+      <br></br>
+
+      <label htmlFor="prijs">Persbericht</label>
+      <input type="text" id="persbericht" name="persbericht" placeholder="Persbericht"></input>
+
+      <br></br>
+      <br></br>
+
+      <label htmlFor="prijs">Afbeelding</label>
+      <input type="text" id="afbeelding" name="afbeelding" placeholder="Afbeelding"></input>
+
+      <br></br>
+      <br></br>
+
+      <label htmlFor="prijs">Projectplant</label>
+      <input type="text" id="projectplan" name="projectplant" placeholder="projectplan"></input>
     </form>
   );
 };

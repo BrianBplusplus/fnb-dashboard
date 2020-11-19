@@ -8,6 +8,8 @@ import Header from "./components/Header";
 import InputForm from "./components/InputForm";
 import LoginPage from "./components/LoginPage";
 import Agenda from "./components/Agenda";
+import Summary from "./components/Summary"
+import DetailPageContainer from "./components/DetailPageContainer";
 
 const theme = createMuiTheme({
   palette: {
@@ -31,6 +33,8 @@ const App = () => {
           <Route exact path="/dashboard/invoeren" component={InputForm} />
           <Route exact path="/dashboard/agenda" component={Agenda} />
           <Route exact path="/dashboard/faq" component={Faq} />
+          <Route exact path="/dashboard/activiteit/kinderboekenweek" component={DetailPageContainer} />
+          <Route exact path="/dashboard/overzicht" component={Summary} />
           <Route exact path="/" component={LoginPage} />
         </Switch>
       </Router>

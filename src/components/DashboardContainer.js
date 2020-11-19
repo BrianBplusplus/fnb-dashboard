@@ -5,6 +5,7 @@ import AddIcon from "@material-ui/icons/Add";
 import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
 import MenuBookIcon from "@material-ui/icons/MenuBook";
 import LiveHelpIcon from "@material-ui/icons/LiveHelp";
+import EventsContainer from "./EventsContainer";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,9 +25,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const monthNames = ["Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December"]
+const date = new Date();
+const currentMonth = monthNames[date.getMonth()]
+
 const DashboardContainer = () => {
   const classes = useStyles();
-
+  
   return (
     <div className={classes.root}>
       <h1>FNB-Dashboard</h1>
@@ -81,6 +86,8 @@ const DashboardContainer = () => {
           Veelgestelde Vragen
         </Button>
       </div>
+      <p>Activiteiten voor {currentMonth}</p>
+      <EventsContainer />
     </div>
   );
 };

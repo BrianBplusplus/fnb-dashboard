@@ -34,7 +34,7 @@ const DashboardContainer = () => {
   
   return (
     <div className={classes.root}>
-      <h1>FNB-Dashboard</h1>
+      <h1>Activiteitenkalender</h1>
 
       <div>
         <Button

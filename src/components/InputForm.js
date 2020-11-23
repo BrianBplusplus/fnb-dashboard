@@ -3,8 +3,8 @@ import React from "react";
 const InputForm = () => {
   return (
     <form>
-      <label htmlFor="maandcalender">maandcalender</label>
-      <input type="checkbox" id="maandcalender" name="maandcalender"></input>
+      <label htmlFor="maandkalender">Maandkalender</label>
+      <input type="checkbox" id="maandkalender" name="maandkalender"></input>
 
       <br></br>
       <br></br>
@@ -31,7 +31,7 @@ const InputForm = () => {
       <br></br>
       <br></br>
 
-      <label htmlFor="website">website</label>
+      <label htmlFor="website">Website</label>
       <input type="checkbox" id="website" name="website" value="website"></input>
 
       <br></br>
@@ -132,7 +132,7 @@ const InputForm = () => {
       <br></br>
       <br></br>
 
-      <label htmlFor="prijs">Projectplant</label>
+      <label htmlFor="prijs">Projectplan</label>
       <input type="text" id="projectplan" name="projectplant" placeholder="projectplan"></input>
     </form>
   );

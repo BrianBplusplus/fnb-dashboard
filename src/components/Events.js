@@ -31,7 +31,7 @@ const Events = () => {
     <Card className={classes.root}>
       <CardContent>
         <Typography variant="h5" component="h2">
-          Kinderboeken week
+          <Link to={"/dashboard/activiteit/kinderboekenweek"}>Kinderboeken week</Link>
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
           20-20-2020 tot 30-30-2030

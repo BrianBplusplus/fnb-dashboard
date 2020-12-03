@@ -25,13 +25,26 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const monthNames = ["Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December"]
+const monthNames = [
+  "Januari",
+  "Februari",
+  "Maart",
+  "April",
+  "Mei",
+  "Juni",
+  "Juli",
+  "Augustus",
+  "September",
+  "Oktober",
+  "November",
+  "December",
+];
 const date = new Date();
-const currentMonth = monthNames[date.getMonth()]
+const currentMonth = monthNames[date.getMonth()];
 
 const DashboardContainer = () => {
   const classes = useStyles();
-  
+
   return (
     <div className={classes.root}>
       <h1>Activiteitenkalender</h1>

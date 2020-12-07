@@ -87,7 +87,7 @@ const Header = () => {
             variant="h6"
             className={classes.title}
           >
-            FNB-Dashboard
+            Activiteiten kalender
           </Typography>
 
           <Button

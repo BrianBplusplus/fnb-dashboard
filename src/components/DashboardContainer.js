@@ -23,6 +23,11 @@ const useStyles = makeStyles((theme) => ({
   secondaryButton: {
     margin: theme.spacing(1),
   },
+  bottomRightBox: {
+    position: "absolute",
+    bottom: "0",
+    right: "0"
+  }
 }));
 
 const monthNames = [
@@ -74,7 +79,9 @@ const DashboardContainer = () => {
           Agenda
         </Button>
       </div>
-      <div>
+      <p>Activiteiten voor {currentMonth}</p>
+      <EventsContainer />
+      <div className={classes.bottomRightBox}>
         <Button
           variant="contained"
           color="default"
@@ -99,8 +106,7 @@ const DashboardContainer = () => {
           Veelgestelde Vragen
         </Button>
       </div>
-      <p>Activiteiten voor {currentMonth}</p>
-      <EventsContainer />
+
     </div>
   );
 };

@@ -31,19 +31,19 @@ const InputForm = () => {
     <form className={classes.formControl}>
       <Card className={classes.card}>
         <h2>Locatiegegevens</h2>
-        <label htmlFor="maandkalender">Maandkalender</label>
+        <label htmlFor="maandkalender">Maandkalender</label><br></br>
         <input type="checkbox" id="maandkalender" name="maandkalender"></input>
 
-        <br></br>
-        <br></br>
+      <br></br>
+      <br></br>
 
-        <label htmlFor="date">Datum</label>
+        <label htmlFor="date">Datum</label><br></br>
         <input type="date" id="date" name="date"></input>
 
-        <br></br>
-        <br></br>
+    <br></br>
+    <br></br>
 
-        <label htmlFor="vestigingen">Vestigingen</label>
+        <label htmlFor="vestigingen">Vestigingen</label><br></br>
         <select name="vestigingen" id="vestigingen">
           <option value="locatie1">Locatie 1</option>
           <option value="locatie2">Locatie 2</option>

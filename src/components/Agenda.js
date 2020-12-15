@@ -45,7 +45,7 @@ const Agenda = () => {
   const classes = useStyles();
 
   return (
-    <div style={{ height: 520, width: '70%', marginLeft: "20px"}}>
+    <div style={{ height: 520, width: '70%', margin: "0 auto"}}>
    
    <p>Activiteiten voor {currentMonth}</p>
 

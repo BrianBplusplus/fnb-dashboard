@@ -20,13 +20,15 @@ const useStyles = makeStyles((theme) => ({
   },
   formControl: {
     margin: theme.spacing(1),
-    minWidth: 120,
+    minWidth: 110,
     display: "flex",
-    justifyContent: "space-around",
+    justifyContent: "center",
   },
   card: {
-    width: "30%",
-    padding: "20px"
+    width: "25%",
+    padding: "20px",
+    margin: "10px",
+    backgroundColor: "#f7f7f7"
   },
   fab: {
     margin: theme.spacing(2),

@@ -141,7 +141,7 @@ const InputForm = () => {
       <br></br>
       <br></br>
       <Card className={classes.card} variant="outlined">
-        <h2>Personeel</h2>
+        <h2>Intern</h2>
         <label htmlFor="uitvoering">Uitvoering</label><br></br>
         <input type="text" id="uitvoering" name="uitvoering" placeholder="Uitvoering"></input>
 
@@ -194,7 +194,7 @@ const InputForm = () => {
       </Card>
 
       <Tooltip title="Activiteit Toevoegen" aria-label="Activiteit toevoegen">
-        <Fab color="primary" className={classes.absolute}>
+        <Fab color="primary " className={classes.absolute}>
           <AddIcon />
         </Fab>
       </Tooltip>

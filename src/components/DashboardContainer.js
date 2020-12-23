@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import { Button, makeStyles } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
@@ -46,9 +47,35 @@ const monthNames = [
 ];
 const date = new Date();
 const currentMonth = monthNames[date.getMonth()];
+const accessToken = "gWTp4m8wLpOXIBH/vAGJjQPBXeyYQ1VymISGhqLF37Y4P2R3p4WS3/GKNRmbdG8o5A0XfMAVuycu3RCmA5p6Eg=="
 
 const DashboardContainer = () => {
   const classes = useStyles();
+  const [apiData, setApiData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+
+  const fetchAPI = async () => {
+    setIsLoading(true);
+    setIsError(false);
+    try {
+      const response = await axios.get(`https://api.trs-suite.com:443/hosting/repository/locations/1442`, {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      });
+      console.log(response.data)
+      setApiData(response.data);
+    } catch (error) {
+      setIsError(true);
+      console.error(error);
+    }
+    setIsLoading(false);
+  };
+  
+  useEffect(() => {
+    fetchAPI();
+  }, []);
 
   return (
     <div className={classes.root}>

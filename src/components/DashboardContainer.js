@@ -71,7 +71,7 @@ const DashboardContainer = () => {
       console.error(error);
     }
     setIsLoading(false);
-  };
+    };
   
   useEffect(() => {
     fetchAPI();
